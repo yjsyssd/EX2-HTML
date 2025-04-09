@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shinchan Homepage</title>
+    <style>
+          /* 通用图片样式 */
+          img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        /* 头部图片样式 */
+        .header-banner {
+            width: 70%;
+        }
+        
+        .header-side-image {
+            width:30%;
+        }
+        
+        /* 角色图片样式 - 放大尺寸 */
+        .character-image {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid #ff6b6b;
+        }
+        
+        /* 添加悬停放大效果 */
+        .character-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 视频容器样式 */
+        .video-container {
+            margin: 20px auto;
+            max-width: 640px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header-banner, .header-side-image {
+                width: 100%;
+            }
+            
+            .character-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+        <img src="assets/shin-chan-banner.jpg" alt="Shinchan Banner" class="header-banner">
+        <img src="assets/naughtiest-son.jpg" alt="Shinchan Side Image" class="header-side-image">
+    </div>
+    <nav style="text-align: center; margin-top: 20px;">
+        <a href="#game">Shinchan: Shiro and the Coal Town Game</a>&nbsp;&nbsp;|
+        <a href="#characters">Characters</a>&nbsp;&nbsp;|
+        <a href="#favorite">Who's your favorite?</a>
+    </nav>
+    <hr>
+</header>
+
+<section id="game" style="text-align: center;">
+    <h1>Shinchan: Shiro and the Coal Town</h1>
+    <p><em>(Available on: Nintendo Switch and Windows PC)</em></p>
+</section>
+
+<section id="video" style="text-align: center;">
+    <h2>Shinchan: Shiro and the Coal Town (Video)</h2>
+    <div class="video-container">
+        <video width="100%" controls>
+            <source src="assets/shinchan-and-the-coal-town.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+<section id="characters">
+    <h2 style="text-align: center;">The Characters</h2>
+    <table style="width: 100%; text-align: center;">
+        <tr>
+            <td>
+                <h3>Shinchan</h3>
+                <img src="assets/character-shinchan.png" alt="Shinchan" class="character-image"><br>
+                The mischievous protagonist known for his hilarious antics.
+            </td>
+            <td>
+                <h3>Misae</h3>
+                <img src="assets/character-misae.webp" alt="Misae" class="character-image"><br>
+                Shinchan's short-tempered but loving mother.
+            </td>
+            <td>
+                <h3>Hiroshi</h3>
+                <img src="assets/character-hiroshi.webp" alt="Hiroshi" class="character-image"><br>
+                The laid-back father who enjoys his evening beer.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Himawari</h3>
+                <img src="assets/character-himawari.png" alt="Himawari" class="character-image"><br>
+                The youngest, loves shiny objects.
+            </td>
+            <td>
+                <h3>Shiro</h3>
+                <img src="assets/character-shiro.png" alt="Shiro" class="character-image"><br>
+                The sensible family dog.
+            </td>
+            <td>
+                <h3>Toru Kazama</h3>
+                <img src="assets/character-toru-kazama.webp" alt="Kazama" class="character-image"><br>
+                The responsible friend of Shinchan.
+            </td>
+        </tr>
+    </table>
+</section>
+<section id="favorite" style="text-align:left;">
+    <h2>Who's your favorite?</h2>
+    <form>
+        <label for="favorite-character">Who's your favorite character?</label><br>
+        <select id="favorite-character" name="favorite-character">
+            <option value="Shinchan">Shinchan</option>
+            <option value="Misae">Misae</option>
+            <option value="Hiroshi">Hiroshi</option>
+            <option value="Himawari">Himawari</option>
+            <option value="Shiro">Shiro</option>
+            <option value="Kazama">Toru Kazama</option>
+        </select><br><br>
+
+        <label for="other-character">Character not in the list? Write their name below:</label><br>
+        <input type="text" id="other-character" name="other-character" placeholder="Enter character name"><br><br>
+
+        <label for="reason">Why do you like this character?</label><br>
+        <textarea id="reason" name="reason" rows="4" cols="50" placeholder="State your reasons in a couple of lines..."></textarea><br><br>
+
+        <h3>Tell us a bit more about yourself</h3>
+
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+        <label>Your Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <label for="dob">Your Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer style="text-align:left;">
+    <hr>
+    <p>&copy; 2025 Programming4</p>
+    <p>Get in touch with us: <a href="mailto:shinchan-lovers@justlearninghtml.com">shinchan-lovers@justlearninghtml.com</a></p>
+</footer>
+
+</body>
+</html>
